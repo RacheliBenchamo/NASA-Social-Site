@@ -1,0 +1,55 @@
+<%- include('includes/head.ejs') %>
+<title>Register</title>
+</head>
+
+<body class="screen">
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-white">Register</h3>
+        <%- include('includes/body.ejs') %>
+      </div>
+      <div class="card-body">
+        <form action="/register/password" method="post">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email" class="form-control" name="email" id="registerEmail" aria-describedby="Email address"
+                   placeholder="Email address" value="<%= userInfo.email %>" maxlength="32" minlength="3"
+                   required>
+            <label for="registerEmail"></label>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" name="first_name" id="registerFirstName" aria-describedby="First name"
+                   placeholder="First name" value="<%= userInfo.firstName %>" pattern="^\s*[A-Za-z]+$" maxlength="32" minlength="3"
+                   required>
+            <label for="registerFirstName"></label>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" class="form-control" name="last_name" id="registerLastName" aria-describedby="Last name"
+                   placeholder="Last name" value="<%= userInfo.lastName %>" pattern="^\s*[A-Za-z]+$" maxlength="32" minlength="3"
+                   required>
+            <label for="registerLastName"></label>
+          </div>
+          <div class="form-group offset-9">
+            <button type="submit" class="btn btn-warning" id="nextButton">Next</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links text-white">
+          Already a member? <a href="/">Log in</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('includes/end.ejs') %>

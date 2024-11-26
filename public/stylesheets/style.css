@@ -1,0 +1,79 @@
+
+.parallax{
+    /* The image used */
+    background-image: url('../images/background.jpg');
+
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.box {
+    /* The bg of each data from nasa */
+    background-color: rgba(0,0,0,.5);
+    color: #fff;
+    border-radius: 25px;
+}
+
+.container{
+    height: 100%;
+    align-content: center;
+}
+
+.card{
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(0,0,0,0.5) !important;
+}
+
+.input-group-prepend span{
+    width: 40px;
+    background-color: #FFC312;
+    color: black;
+    border:0 !important;
+}
+
+.screen{
+    background: url('../images/background.jpg')no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.error-message-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.error-message {
+    background-color: #fce4e4;
+    border: 1px solid #fcc2c3;
+    padding: 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #cc0033;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 20px;
+    text-shadow: 1px 1px rgba(250,250,250,.3);
+}
+
+.fit { /* set relative picture size */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+

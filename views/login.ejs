@@ -1,0 +1,43 @@
+<%- include('includes/head.ejs') %>
+<title>Login</title>
+</head>
+<body class="screen">
+<div class="container">
+  <div class="d-flex justify-content-center h-100">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-white">Sign in</h3>
+        <%- include('includes/body.ejs') %>
+      </div>
+      <div class="card-body">
+        <form action="/feed" method="post">
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+            </div>
+            <input type="email" class="form-control" id="loginEmail" name="email" aria-describedby="Email address"
+                   placeholder="Email address" maxlength="32" minlength="3" required>
+            <label for="loginEmail"></label>
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" class="form-control" id="loginPassword" name="password" aria-describedby="Password"
+                   placeholder="Password" pattern="^\s*[A-Za-z0-9]+$"  maxlength="32" minlength="3" required>
+            <label for="loginPassword"></label>
+          </div>
+          <div class="form-group offset-9">
+            <button type="submit" class="btn btn-warning" id=loginButton>Sign in</button>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer">
+        <div class="d-flex justify-content-center links text-white">
+          Don't have an account?<a href="/register">Register</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('includes/end.ejs') %>
